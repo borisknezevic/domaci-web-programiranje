@@ -5,8 +5,10 @@ import org.springframework.stereotype.Repository;
 import vezbe.demo.model.Employee;
 import vezbe.demo.model.Project;
 
+import java.util.List;
 import java.util.Set;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long> {
+    List<Project> findByEmployees(Employee employee);
 }
